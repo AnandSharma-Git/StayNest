@@ -1,4 +1,4 @@
-# StayNest-Inspired Full-Stack Web Application 🚀
+# StayNext Full-Stack Web Application 🚀
 
 <p align="center">
   <b style="color: blue;  ">Visitor count</b>
@@ -28,7 +28,7 @@
 
 ## Project Overview
 
-Excited to share my journey of developing a feature-rich full-stack web application inspired by StayNest. The project is built using MongoDB, Express.js, and Node.js.
+Excited to share my journey of developing a feature-rich full-stack web application called StayNext. The project is built using MongoDB, Express.js, and Node.js.
 
 ## Technologies & Packages Used
 
@@ -175,7 +175,7 @@ LinkedIn : https://www.linkedin.com/in/anand--sh/
 
 ## Thank You
 
-Thank you for exploring StayNest! Your feedback is valuable. If you have any suggestions or thoughts, feel free to share them with us. 😊
+Thank you for exploring StayNext! Your feedback is valuable. If you have any suggestions or thoughts, feel free to share them with us. 😊
 
 ---
 
