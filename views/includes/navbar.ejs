@@ -21,7 +21,7 @@
           <% if(!currUser || !currUser.image.url){ %>
           <img src="/Icon/navbar-icon-user.png" alt="User" id="png-img-user">
           <% } else{%>
-          <img src="<%= currUser.image.url %>" alt="Profile" id="png-img-user">
+          <img src="<%= currUser.image.url %>" alt="Profile" id="png-img-user" onerror="this.onerror=null; this.src='/Icon/navbar-icon-user.png';">
           <% } %>
           <img src="/Icon/navbar-icon-cross.png" id="png-img-cross">
         </div>
