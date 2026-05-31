@@ -32,7 +32,7 @@
                 </div>
             </div>
             <!-- Authorization  -->
-            <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
+            <% if(currUser && listing.owner && currUser._id.equals(listing.owner._id)){ %>
             <div class="btns offset-2 ">
                 <div class="btns-edit">
                     <a type="button" href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn styleBtn">Edit</a>
