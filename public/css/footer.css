@@ -188,50 +188,27 @@
 }
 
 .ftr-akash {
-    font-family: 'Dancing Script', cursive !important;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
-    filter: drop-shadow(2px 2px 4px rgb(11, 8, 46));
+    font-size: 1.85rem;
+    letter-spacing: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.236);
-    padding: 10px 0px 0px 0px;
+    padding: 14px 0px 4px 0px;
     margin-right: 5%;
 }
 
-.ftr-akash p:hover {
-    background: -webkit-linear-gradient(blue, red);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-}
-
 .ftr-akash p {
-    background: -webkit-linear-gradient(#ff0000, black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: sheck 5s infinite linear;
+    color: #111827;
+    margin-bottom: 0;
+    text-shadow: 0 4px 14px rgba(255, 56, 92, .24);
+    transition: color .25s ease, text-shadow .25s ease, transform .25s ease;
 }
 
-@keyframes sheck {
-    0% {
-        transform: scale(1);
-    }
-
-    33% {
-        transform: scale(1.2);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    66% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+.ftr-akash p:hover {
+    color: #ff385c;
+    cursor: pointer;
+    text-shadow: 0 8px 22px rgba(255, 56, 92, .34);
+    transform: translateY(-2px) scale(1.04);
 }
