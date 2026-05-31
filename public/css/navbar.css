@@ -1,9 +1,21 @@
-.imgStayNext {
-    margin-top: 3px;
-    margin-left: .75rem;
-    height: 2rem;
-    width: 6.2rem;
-    filter: contrast(2);
+.brandStayNext {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-left: .9rem;
+    color: #ff385c;
+    text-decoration: none;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.brandStayNext i {
+    font-size: 1.8rem;
+}
+
+.brandStayNext span {
+    line-height: 1;
 }
 
 .nav-box {
