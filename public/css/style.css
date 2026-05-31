@@ -236,6 +236,7 @@ body::-webkit-scrollbar-thumb,
     width: 100%;
     border-radius: 1rem;
     border: 1px solid rgba(0, 128, 0, 0.428);
+    overflow: hidden;
 }
 
 .mapboxgl-ctrl-bottom-left,
@@ -245,6 +246,18 @@ body::-webkit-scrollbar-thumb,
 
 #map {
     position: relative;
+}
+
+.map-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    color: #555;
+    font-weight: 700;
+    z-index: 1;
 }
 
 .mapboxgl-ctrl-geocoder {

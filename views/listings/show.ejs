@@ -10,7 +10,7 @@
     }
 </style>
 <script>
-    const mapToken = "<%= process.env.MAP_TOKEN %>";
+    const mapToken = "<%= process.env.MAPBOX_TOKEN || '' %>";
     // const listing = <%#- JSON.stringify(listing) %>;
     const listing = JSON.parse(`<%- JSON.stringify(listing) %>`);
 </script>
@@ -112,6 +112,7 @@
             <div class="col-8 offset-2 mapImg">
                 <p><b>Where you'll be &nbsp;<i class="fa-solid fa-location-crosshairs"></i></p></b>
                 <div id="map" style="position: relative;">
+                    <div class="map-fallback">Map is loading...</div>
                     <div class="map-zoom-icon">
                         <div class="icon icon-plus" onclick="zoomin()"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                         <div class="icon icon-min" onclick="zoomout()"><i class="fa-solid fa-magnifying-glass-minus"></i></div>
