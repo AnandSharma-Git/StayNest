@@ -3,10 +3,13 @@ const User = require("../models/user.js");
 const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID;
 const FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET;
 const FACEBOOK_CALLBACK_URL = process.env.FACEBOOK_CALLBACK_URL;
+const facebookConfigured =
+	FACEBOOK_APP_ID && FACEBOOK_APP_SECRET && FACEBOOK_CALLBACK_URL;
 
 
 var FacebookStrategy = require("passport-facebook").Strategy;
-passport.use(
+if (facebookConfigured) {
+	passport.use(
 	new FacebookStrategy(
 		{
 			clientID: FACEBOOK_APP_ID,
@@ -39,6 +42,9 @@ passport.use(
 			}
 		}
 	)
-);
+	);
+}
+
+passport.facebookConfigured = Boolean(facebookConfigured);
 
 module.exports = passport;
