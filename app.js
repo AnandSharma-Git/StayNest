@@ -37,9 +37,11 @@ async function main() {
 	await mongoose.connect(DB_URL);
 }
 
-app.listen(8080, () => {
-	console.log("server is listening to port 8080");
-});
+if (require.main === module) {
+	app.listen(8080, () => {
+		console.log("server is listening to port 8080");
+	});
+}
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -118,3 +120,5 @@ app.use((err, req, res, next) => {
 	let { statusCode = 500, message = "Something went wrong!" } = err;
 	res.status(statusCode).render("listings/error.ejs", { message });
 });
+
+module.exports = app;
