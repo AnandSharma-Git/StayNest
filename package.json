@@ -1,16 +1,16 @@
 {
 	"engines": {
-		"node": "18.17.1"
+		"node": "24.x"
 	},
 	"name": "staynest",
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
 	"scripts": {
-  "dev": "nodemon app.js",
-  "start": "node app.js",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+		"dev": "nodemon app.js",
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
 	"keywords": [],
 	"author": "Anand Sharma",
 	"license": "MIT",
@@ -35,7 +35,6 @@
 		"passport-google-oauth20": "2.0.0",
 		"passport-local": "1.0.0",
 		"passport-local-mongoose": "8.0.0",
-		"path": "0.12.7",
-		"start": "node app.js"
+		"path": "0.12.7"
 	}
 }
