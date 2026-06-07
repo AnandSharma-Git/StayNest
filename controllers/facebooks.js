@@ -20,6 +20,8 @@ if (facebookConfigured) {
         async function (accessToken, refreshToken, profile, cb) {
             console.log(profile)
             console.log(profile._json)
+			const fullName = profile._json.name || profile.displayName || "Facebook User";
+			const [firstName, ...lastName] = fullName.split(" ");
 			let existingUser = await User.findOne({ providerId: profile.id });
 			if (existingUser) {
 				return cb(null, existingUser);
@@ -27,10 +29,10 @@ if (facebookConfigured) {
 				const newUser = new User({
 					providerId: profile.id,
 					provider: 'facebook',
-					fName: profile._json.name.split(' ')[0],
-					lName: profile._json.name.split(' ').slice(1).toString(),
+					fName: firstName,
+					lName: lastName.join(" "),
 					email: profile._json.email || `facebook${(Math.floor(Math.random() * (501)) + 500)}@example.com`,
-					username: profile._json.name.split(' ')[0].toLowerCase()+(Math.floor(Math.random() * (501)) + 500),
+					username: firstName.toLowerCase()+(Math.floor(Math.random() * (501)) + 500),
 					image: {
 						// url: profile._json.picture.data.url,
 						url: `https://graph.facebook.com/${profile.id}/picture?type=large`,

@@ -14,8 +14,7 @@ router.get(
 	passport.authenticate("facebook", {
 		authType: "reauthenticate",
 		display: "popup",
-		scope: ["email"],
-		profileFields: ["id", "displayName", "photos", "emails"],
+		profileFields: ["id", "displayName", "photos"],
 	})
 );
 
